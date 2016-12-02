@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
 
@@ -11,11 +12,15 @@ module.exports = {
 
     output: {
         path: path.resolve("./build/"),
-        filename: "[name].js",
-        sourceMapFilename: '[name].map'
+        filename: "[name].[hash].js",
+        sourceMapFilename: '[name].[hash].map'
     },
 
     plugins: [
+
+        //  Hash the files using MD5 so that their names change when the content changes
+        //  https://www.npmjs.com/package/webpack-md5-hash
+        new WebpackMd5Hash(),
 
         //  Process the HTML file(s) - https://www.npmjs.com/package/html-webpack-plugin 
         new HtmlWebpackPlugin({
