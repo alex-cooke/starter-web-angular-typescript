@@ -14,11 +14,11 @@ const config = {
         //  https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
         new webpack.optimize.UglifyJsPlugin(),
 
-        //     new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({
 
-        //         settings: path.resolve(__dirname, "./settings/dev")
+            settings: path.resolve(__dirname, "./settings")
 
-        //     })
+        })
 
     ],
 

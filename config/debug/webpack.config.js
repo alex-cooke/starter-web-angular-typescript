@@ -6,19 +6,18 @@ const commonConfig = require('../webpack.config.js'); // the settings that are c
 const config = {
 
     output: {
-        path: path.resolve("./build/dev"),
+        path: path.resolve("./build/debug"),
     },
 
+    plugins: [
 
-    // plugins: [
+        new webpack.ProvidePlugin({
 
-    //     new webpack.ProvidePlugin({
+            settings: path.resolve(__dirname, "./settings")
 
-    //         settings: path.resolve(__dirname, "./settings/dev")
+        })
 
-    //     })
-
-    // ],
+    ],
 
     devServer: {
 

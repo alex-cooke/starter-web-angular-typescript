@@ -1,12 +1,42 @@
+// {
+//     "compilerOptions": {
+//         "module": "commonjs",
+//         "target": "es5",
+//         "noImplicitAny": false,
+//         "sourceMap": false
+//     },
+//     "exclude": [
+//         "node_modules",
+//         "build"
+//     ]
+// }
+
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false
-    },
-    "exclude": [
-        "node_modules",
-        "build"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitHelpers": false,
+    "strictNullChecks": false,
+    "baseUrl": "./src"
+  },
+  //  "types": [
+  //    "node",
+  //    "jquery",
+  //    "jasmine"
+  //  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "common",
+    "spa",
+    "extras"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
 }

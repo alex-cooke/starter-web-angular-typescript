@@ -1,5 +1,7 @@
 class Controller implements ng.IController {
 
+    build: string = settings.build;
+
 }
 
 class Component implements ng.IComponentOptions {
