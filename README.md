@@ -2,18 +2,22 @@
 Starter for Angular with TypeScript, npm, Webpack
 
 Language
+
     TypeScript
 
 Package Manager
+
     npm
 
 Framework
+
     Angular 1.5
 
     Routing
         angular-route
 
 Bundling & Packaging
+
     webpack
     
     Bundle Splitting
@@ -36,12 +40,15 @@ Bundling & Packaging
         tslint-loader
 
 Development Server
+
     webpack-dev-server
 
 Debugging
+
     Chrome
 
 Linting
+
     tslint
 
 Build
