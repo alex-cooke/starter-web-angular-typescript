@@ -30,6 +30,8 @@
     "requirejs": "^2.3.2",
     "rimraf": "^2.5.4",
     "ts-loader": "^1.2.2",
+    "tslint": "^4.0.2",
+    "tslint-loader": "^3.2.1",
     "typescript": "^2.0.10",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"

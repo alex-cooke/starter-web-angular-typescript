@@ -1,5 +1,3 @@
-
-
 class Controller implements ng.IController {
 
 }
@@ -14,5 +12,5 @@ class Component implements ng.IComponentOptions {
 export default (module: ng.IModule) => {
 
     module.component("navigation", new Component());
-    
-}
+
+};

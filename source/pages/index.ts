@@ -8,4 +8,4 @@ export default (module: ng.IModule) => {
     pageA(module);
     pageB(module);
 
-}
+};

@@ -14,4 +14,4 @@ export default (module: ng.IModule) => {
 
     module.component("home", new Component());
 
-}
+};

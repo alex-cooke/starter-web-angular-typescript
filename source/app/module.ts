@@ -6,4 +6,4 @@ export default () : ng.IModule => {
         'ngRoute'
     ]);
 
-}
+};

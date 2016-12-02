@@ -11,5 +11,5 @@ class Component implements ng.IComponentOptions {
 export default (module: ng.IModule) => {
 
     module.component("pageA", new Component());
-    
-}
+
+};

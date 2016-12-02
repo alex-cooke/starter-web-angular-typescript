@@ -36,11 +36,22 @@ module.exports = {
 
     },
 
+
+    //  Options affecting the normal modules
     module: {
+        
+        //  An array of applied pre loaders.
+        preLoaders: [
+            {
+                test: /\.tsx?$/,
+                exclude: 'node_modules',
+                loader: 'tslint-loader'
+            }
+            
+        ],
 
         //  An array of automatically applied loaders.
         loaders: [
-            
             //  TypeScript - https://github.com/TypeStrong/ts-loader
             { 
                 test: /\.tsx?$/,
@@ -50,8 +61,9 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader',
-            }  
-        ]
+            }           
+       ]
+
     },
 
     devServer: {
