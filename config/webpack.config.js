@@ -12,6 +12,7 @@ module.exports = {
 
     devtool: 'eval',
 
+
     output: {
         path: path.resolve("./build/"),
         filename: "[name].[hash].js",

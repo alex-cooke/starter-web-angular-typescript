@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf build",
-    "start": "webpack-dev-server --config ./config/webpack.config.js",
-    "build": "npm run clean && webpack --config ./config/webpack.config.js"
+    "build:debug": "npm run clean && webpack --config ./config/debug/webpack.config.js",
+    "build:release": "npm run clean && webpack --config ./config/release/webpack.config.js",
+    "build": "npm run build:debug",
+    "start:debug": "webpack-dev-server --config ./config/debug/webpack.config.js",
+    "start:release": "webpack-dev-server --config ./config/release/webpack.config.js",
+    "start": "npm run start:debug"
   },
   "repository": {
     "type": "git",

@@ -37,7 +37,12 @@ Bundling & Packaging
         ts-loader
     
     Linting
+    
         tslint-loader
+
+    Configuration
+
+        webpack-merge - 'debug' and 'release' configurations each based on the base configuration
 
 Development Server
 
@@ -51,4 +56,3 @@ Linting
 
     tslint
 
-Build
