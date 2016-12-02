@@ -10,4 +10,4 @@ pages(app);
 
 
 //  CSS
-require('./index.css');
+require('./index.scss');

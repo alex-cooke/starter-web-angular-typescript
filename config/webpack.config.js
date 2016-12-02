@@ -80,6 +80,12 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 loader: "style-loader!css-loader"
+            },
+            //  SCSS
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader!sass-loader"
             }
        ]
 
