@@ -2,24 +2,24 @@ import 'angular-route';
 
 export default (mod: ng.IModule) => {
 
-    mod.config(["$routeProvider", '$locationProvider',
+    mod.config(['$routeProvider', '$locationProvider',
         ($routeProvider: angular.route.IRouteProvider, $locationProvider: angular.ILocationProvider) => {
 
             $routeProvider
 
-                .when("/", {
+                .when('/', {
                     template: '<home></home>'
                 })
 
-                .when("/a", {
+                .when('/b/', {
                     template: '<page-a></page-a>'
                 })
 
-                .when("/b", {
+                .when('/b', {
                     template: '<page-b></page-b>'
                 })
 
-                .otherwise("/");
+                .otherwise('/');
 
             $locationProvider.html5Mode({
                 enabled: true,
