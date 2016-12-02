@@ -16,3 +16,5 @@ export default (module: ng.IModule) => {
     module.component('navigation', new Component());
 
 };
+
+require("./index.css");

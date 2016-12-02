@@ -40,6 +40,11 @@ Bundling & Packaging
     
         tslint-loader
 
+    CSS
+
+        css-loader
+        style-loader
+
     Configuration
 
         webpack-merge - 'debug' and 'release' configurations each based on the base configuration
