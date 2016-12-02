@@ -9,15 +9,19 @@ const config = {
         path: path.resolve("./build/release"),
     },
 
-    // plugins: [
+    plugins: [
 
-    //     new webpack.ProvidePlugin({
+        //  https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
+        new webpack.optimize.UglifyJsPlugin(),
 
-    //         settings: path.resolve(__dirname, "./settings/dev")
+        //     new webpack.ProvidePlugin({
 
-    //     })
+        //         settings: path.resolve(__dirname, "./settings/dev")
 
-    // ],
+        //     })
+
+    ],
+
     devServer: {
 
         contentBase: path.resolve("./build/release")
