@@ -1,14 +1,16 @@
 const path = require('path');
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
 
     entry: {
+        dependencies: "./source/dependencies.ts",        
         index: "./source/index.ts"
     },
 
-    devtool: 'source-map',
+    devtool: 'eval',
 
     output: {
         path: path.resolve("./build/"),
@@ -21,6 +23,11 @@ module.exports = {
         //  Hash the files using MD5 so that their names change when the content changes
         //  https://www.npmjs.com/package/webpack-md5-hash
         new WebpackMd5Hash(),
+
+        //  https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "dependencies"
+        }),
 
         //  Process the HTML file(s) - https://www.npmjs.com/package/html-webpack-plugin 
         new HtmlWebpackPlugin({

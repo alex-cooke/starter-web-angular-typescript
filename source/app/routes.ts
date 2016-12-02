@@ -11,7 +11,7 @@ export default (mod: ng.IModule) => {
                     template: '<home></home>'
                 })
 
-                .when('/b/', {
+                .when('/a', {
                     template: '<page-a></page-a>'
                 })
 
