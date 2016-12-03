@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sat Dec 03 2016 19:17:50 GMT+1000 (E. Australia Standard Time)
+// Generated on Sat Dec 03 2016 20:52:32 GMT+1000 (E. Australia Standard Time)
 
 module.exports = function(config) {
   config.set({
