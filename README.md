@@ -76,3 +76,9 @@ Linting
 
     tslint
 
+Testing
+
+    Karma
+    Jasmin
+    PhantomJS
+    JavaScript
