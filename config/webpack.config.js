@@ -90,6 +90,11 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
+            },
+            //  IMAGES
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=100000'
             }
        ]
 
