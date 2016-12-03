@@ -1,8 +1,19 @@
-
 <h1>
     <img class="homepage_image" />
-    <img src="./homepage.png" style="width: 45px; height; 45px; border: solid 1px #000;" />
-    Angular 1.5 with TypeScript (Starter Kit)</h1>
-<div>Build: {{ $ctrl.build }}</div>
+    <img src="./homepage.png" style="width: 45px; height; 45px; border: solid 1px #000;" /> Angular 1.5 with TypeScript (Starter
+    Kit)
+</h1>
 
-<a href="/">Home</a> - <a href="/a">Page A</a> - <a href="/b">Page B</a>
+
+<div class="menu">
+    <div style="float:left;">
+        <i class="fa fa-home"></i>
+        <a href="/">Home</a>
+        <i class="fa fa-link"></i>
+        <a href="/a">Page A</a>
+        <i class="fa fa-link"></i>
+        <a href="/b">Page B</a>
+    </div>
+    <div style="float:right">Build: {{ $ctrl.build }}</div>
+    <div style="clear:both"></div>
+</div>

@@ -54,6 +54,16 @@ Bundling & Packaging
 
         webpack-merge - 'debug' and 'release' configurations each based on the base configuration
 
+    Images
+
+        url-loader
+        file-loader
+
+    Fonts
+
+        url-loader
+        file-loader
+
 Development Server
 
     webpack-dev-server

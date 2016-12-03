@@ -93,7 +93,7 @@ module.exports = {
             },
             //  IMAGES
             {
-                test: /\.(png|jpg)$/,
+                test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|svg)(\?.*$|$)/i,
                 loader: 'url-loader?limit=100000'
             }
        ]
