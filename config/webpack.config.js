@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -39,7 +40,10 @@ module.exports = {
             //   Inject all assets into the given template
             inject: 'head',
 
-        })
+        }),
+
+        //  Extract the CSS into it's own file
+        new ExtractTextPlugin("styles.css")
 
     ],
 
@@ -79,13 +83,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
             },
             //  SCSS
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader!sass-loader"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
             }
        ]
 

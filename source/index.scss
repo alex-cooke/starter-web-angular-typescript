@@ -1,7 +1,12 @@
 body {
+    margin: 0;
     background: #abcdef;
-
+    
     h1 {
         font-family: Tahoma;
+    }
+
+    .content {
+        padding: 16px;
     }
 }

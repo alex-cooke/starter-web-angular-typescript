@@ -17,4 +17,4 @@ export default (module: ng.IModule) => {
 
 };
 
-require("./index.css");
+require('./index.scss');

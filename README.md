@@ -44,6 +44,11 @@ Bundling & Packaging
 
         css-loader
         style-loader
+        auto-prefixer
+
+    SCSS
+
+        sass-loader
 
     Configuration
 
