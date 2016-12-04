@@ -79,6 +79,6 @@ Linting
 Testing
 
     Karma
-    Jasmin
+    Jasmine
     PhantomJS
     JavaScript

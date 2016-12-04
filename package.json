@@ -11,7 +11,7 @@
     "build": "npm run build:debug",
     "start:debug": "webpack-dev-server --config ./config/debug/webpack.config.js",
     "start:release": "webpack-dev-server --config ./config/release/webpack.config.js",
-    "start": "npm run start:debug"
+    "start": "npm run start:debug & npm test"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   "homepage": "https://github.com/alex-cooke/starter-web-angular-typescript#readme",
   "devDependencies": {
     "@types/angular": "^1.5.20",
+    "@types/angular-mocks": "0.0.0",
     "@types/angular-route": "^1.3.2",
+    "@types/jasmine": "^2.5.38",
     "@types/requirejs": "^2.1.28",
     "angular": "^1.5.9",
     "angular-mocks": "^1.5.9",
@@ -41,6 +43,7 @@
     "karma": "^1.3.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^1.8.0",
     "node-sass": "^3.13.0",
     "requirejs": "^2.3.2",
     "rimraf": "^2.5.4",

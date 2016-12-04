@@ -4,7 +4,9 @@
     <title>Starter, Angular 1.5 with TypeScript</title>
 </head>
 
-<body>
+<body ng-controller="main as $ctrl">
+
+    {{ $ctrl.message }}
     <navigation></navigation>
     <div class="content">
         <ng-view></ng-view>

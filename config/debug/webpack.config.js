@@ -11,6 +11,11 @@ const config = {
 
     plugins: [
 
+        //  https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "dependencies"
+        }),
+
         new webpack.ProvidePlugin({
 
             settings: path.resolve(__dirname, "./settings")

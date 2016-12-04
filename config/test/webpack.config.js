@@ -6,18 +6,10 @@ const commonConfig = require('../webpack.config.js'); // the settings that are c
 const config = {
 
     output: {
-        path: path.resolve("./build/release"),
+        path: path.resolve("./build/test"),
     },
 
     plugins: [
-
-        // https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "dependencies"
-        }),
-
-        //  https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
-        new webpack.optimize.UglifyJsPlugin(),
 
         new webpack.ProvidePlugin({
 
@@ -29,7 +21,7 @@ const config = {
 
     devServer: {
 
-        contentBase: path.resolve("./build/release")
+        contentBase: path.resolve("./build/test")
 
     }
 

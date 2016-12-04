@@ -22,14 +22,12 @@ module.exports = {
 
     plugins: [
 
+        new webpack.optimize.DedupePlugin(), 
+        
         //  Hash the files using MD5 so that their names change when the content changes
         //  https://www.npmjs.com/package/webpack-md5-hash
         new WebpackMd5Hash(),
 
-        //  https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "dependencies"
-        }),
 
         //  Process the HTML file(s) - https://www.npmjs.com/package/html-webpack-plugin 
         new HtmlWebpackPlugin({

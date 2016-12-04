@@ -1,23 +1,24 @@
+var webpackConfig = require('./config/test/webpack.config');
+
+//webpackConfig.entry = {};
+
 // Karma configuration
 // Generated on Sat Dec 03 2016 20:52:32 GMT+1000 (E. Australia Standard Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
-      './node_modules/angular/angular.min.js',
-      './node_modules/angular-mocks/angular-mocks.js',
-      'source/**/*.spec.js'
+      "source/index.ts",
+      { pattern: "source/**/*.spec.ts", watch: true }
     ],
 
 
@@ -25,12 +26,14 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      "source/index.ts": ['webpack'],
+      "source/**/*.spec.ts": ['webpack']
     },
 
+    webpack: webpackConfig,
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
